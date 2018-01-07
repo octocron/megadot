@@ -10,7 +10,7 @@ alias -- -="cd -"
 # Shortcuts
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
-alias p="cd ~/projects"
+alias p="cd ~/Projects"
 
 # Update App Store apps
 alias appupdate="sudo softwareupdate -i -a"

@@ -14,11 +14,12 @@ Further concatenation of ideas will occur in this ongoing project.
 
 ## Use
 Copy the zip file to your machine.  Then cp these four files to your Home directory:
+```bash
 	.bashrc
 	.bash_profile
 	.bash_prompt
 	.aliases
-
+```
 To rid of these settings just delete the files from your Home directory.
 
 ## Future Ideas Include:

@@ -1,4 +1,4 @@
-## MEGADOT [![MIT License][license-badge]](LICENSE.md)
+## Welcome to Megadot Files
 This is a personal project of various dot files.
 ![Screenshot of my shell prompt](https://github.com/Quamor/megadot/blob/master/bashstyle.png?raw=true)
 
@@ -12,8 +12,8 @@ This is a personal project of various dot files.
 
 Further concatenation of ideas will occur in this ongoing project.
 
-## Use
-Copy the zip file to your machine.  Then cp these four files to your Home directory:
+## Use (bash customization)
+Copy the zip file to your machine and unzip.  Then copy these four files into your Home directory:
 ```bash
 	.bashrc
 	.bash_profile

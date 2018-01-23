@@ -24,7 +24,7 @@ To rid of these settings just delete the files from your Home directory.
 
 ## Future Ideas Include:
 
-Dark Mode Options File -> For Dark Mode Extention on most browsers.
+Dark Mode Options File -> For Dark Mode Extension on most browsers.
 
 Hosts File -> For specific site script blocking, mostly for bitcoin mining.
 

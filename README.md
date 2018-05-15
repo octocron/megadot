@@ -13,6 +13,8 @@ This is a personal project of various dot files.
 Further concatenation of ideas will occur in this ongoing project.
 
 ## Use (bash customization)
+If you have some customizations of your own of any of these files be sure to save them elsewhere before proceeding!
+
 Copy the zip file to your machine and unzip.  Then copy these four files into your Home directory:
 ```bash
 	.bashrc

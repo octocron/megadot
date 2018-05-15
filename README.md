@@ -1,3 +1,5 @@
+https://img.shields.io/github/license/mashape/apistatus.svg    |   https://img.shields.io/github/languages/code-size/badges/shields.svg   |   https://img.shields.io/github/stars/badges/shields.svg?style=social
+
 ## Welcome to Megadot Files
 This is a personal project of various dot files.
 ![Screenshot of my shell prompt](https://github.com/Quamor/megadot/blob/master/bashstyle.png?raw=true)

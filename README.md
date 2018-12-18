@@ -24,13 +24,8 @@ Copy the zip file to your machine and unzip.  Then copy these four files into yo
 	.bash_prompt
 	.aliases
 ```
+May need to adjust to your liking but they are a good starting point.
 To rid of these settings just delete the files from your Home directory.
-
-## Future Ideas Include:
-
-Dark Mode Options File -> For Dark Mode Extension on most browsers.
-
-Hosts File -> For specific site script blocking, mostly for bitcoin mining.
 
 ## Adjustment for Windows
 For use with Git Bash found on line ~117 in .bash_prompt:
@@ -38,3 +33,6 @@ For use with Git Bash found on line ~117 in .bash_prompt:
 ```bash
 PS1+="\n"; should be changed to PS1+=$'\n';
 ```
+## Future Ideas:
+
+Hosts File -> For specific site script blocking, mostly for bitcoin mining.

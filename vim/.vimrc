@@ -19,6 +19,13 @@ set visualbell
 set history=1000  "store lots of :cmdline history
 set t_Co=256
 
+
+" netrw settings (nerdtree that ships with vim)
+let g:netrw_liststyle = 3   "viewtype can be cycled with i
+let g:netrw_banner = 0    "removes info banner, cycle with I
+let g:netrw_browse_split = 3 "opens files in new tab from tree
+let g:netrw_winsize = 25  "set tree width to 25%
+
 "text rendering options
 set display+=lastline
 set encoding=utf-8

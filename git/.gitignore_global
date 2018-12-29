@@ -10,12 +10,12 @@ Thumbs.db
 
 # Compiled source #
 ###################
-*.com
 *.dll
 *.exe
 *.o
 *.so
 *.class
+*.swp
 
 # Packages #
 ############

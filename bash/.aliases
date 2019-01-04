@@ -21,8 +21,8 @@ alias decept="rsync -avz --exclude=.DS_Store --exclude='./Projects/logs' --delet
 # polite logout of a remote server
 alias later="logout"
 
-# Sass Watching
-alias sw="nc towel.blinkenlights.nl 23"
+# Star Wars
+alias starwars="nc towel.blinkenlights.nl 23"
 
 # Update App Store apps
 alias appupdate="sudo softwareupdate -i -a"
@@ -37,7 +37,8 @@ else # macOS `ls`
 fi
 
 # Start watching SASS Project
-alias sasswatch="sass --watch ./SASS/app.sass:./CSS/app.css --style expanded"
+alias sw="sass --watch sass/app.sass:css/app.css --style expanded"
+alias swc="sass --watch sass/app.sass:css/app.css --style compressed"
 
 # List all files colorized in long format
 alias ll="ls -lF ${colorflag}"

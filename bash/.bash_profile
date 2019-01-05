@@ -1,6 +1,11 @@
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$PATH";
-export HISTCONTROL=ignoreboth:erasedups;
+export HISTCONTROL=ignoredups:erasedups;
+export HISTTIMEFORMAT="%h %d  @%H:%M:%S ";
+export HISTSIZE=10000;
+export HISTFILESIZE=10000;
+export PROMPT_COMMAND="history -a; history -c; history -r;"
+#export HISTIGNORE="ls:cd"
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
@@ -47,3 +52,4 @@ complete -W "NSGlobalDomain" defaults;
 
 # Add `killall` tab completion for common apps
 complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall;
+

@@ -67,13 +67,13 @@ if tput setaf 1 &> /dev/null; then
 	reset=$(tput sgr0);
 	# Solarized colors, taken from http://git.io/solarized-colors.
 	black=$(tput setaf 0);
-	blue=$(tput setaf 21);
-	cyan=$(tput setaf 14);
-	green=$(tput setaf 10);
+	blue=$(tput setaf 191);
+	cyan=$(tput setaf 45);
+	green=$(tput setaf 71);
 	orange=$(tput setaf 166);
 	purple=$(tput setaf 125);
 	red=$(tput setaf 124);
-	violet=$(tput setaf 61);
+	violet=$(tput setaf 63);
 	white=$(tput setaf 15);
 	yellow=$(tput setaf 226);
 else
@@ -112,8 +112,8 @@ PS1+="\[${userStyle}\]\u"; # username
 PS1+="\[${white}\] at ";
 PS1+="\[${hostStyle}\]\h"; # host
 PS1+="\[${white}\] in ";
-PS1+="\[${green}\]\W"; # working directory full path
-PS1+="\$(prompt_git \"\[${white}\] on \[${blue}\]\" \"\[${cyan}\]\")"; # Git repository details
+PS1+="\[${red}\]\W"; # working directory full path
+PS1+="\$(prompt_git \"\[${white}\] on \[${cyan}\]\" \"\[${violet}\]\")"; # Git repository details
 PS1+="\n";
 PS1+="\[${white}\]\$ \[${reset}\]"; # `$` (and reset color)
 export PS1;

@@ -1,4 +1,4 @@
-<img src="https://img.shields.io/github/license/mashape/apistatus.svg">    |   <img src="https://img.shields.io/github/languages/code-size/badges/shields.svg">
+<img src="https://img.shields.io/badge/license-MIT-green.svg">    |   <img src="https://img.shields.io/github/languages/code-size/badges/shields.svg">
 
 ## Welcome to Megadot Files
 This is a personal project of various dot files. This is an example of bash

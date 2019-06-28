@@ -1,11 +1,11 @@
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$PATH";
 export HISTCONTROL=ignoredups:erasedups;
-export HISTTIMEFORMAT="%h %d  @%H:%M:%S ";
+#export HISTTIMEFORMAT="%h %d  @%H:%M:%S ";
 export HISTSIZE=10000;
 export HISTFILESIZE=10000;
 export PROMPT_COMMAND="history -a; history -c; history -r;"
-#export HISTIGNORE="ls:cd"
+export HISTIGNORE="ls:bg:fg:history:la:ll:pi3:pi4"
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.

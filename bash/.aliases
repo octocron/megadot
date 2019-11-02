@@ -25,7 +25,7 @@ alias later="logout"
 alias starwars="nc towel.blinkenlights.nl 23"
 
 # Update App Store apps
-alias appupdate="sudo softwareupdate -i -a"
+alias appupdate="sudo softwareupdate -i -a --restart"
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`

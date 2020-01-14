@@ -4,4 +4,6 @@ say -v 'Victoria' Hey $USER, Now updating your programs and libraries.  Please w
 brew update
 brew upgrade
 brew cleanup
+echo "Finished updating Homebrew, Now updating Mac."
+sudo softwareupdate -i -a --restart
 echo " Last Run: `date`" >> ~/update_log.txt

@@ -1,8 +1,8 @@
-set nocompatible "use vim over vi
+set nocompatible "use vim over vi; must be at very top
 
 "pathogen settings
 execute pathogen#infect()
-filetype plugin indent on
+filetype plugin indent on	"use plugins according to file type
 set noshowmode
 
 "air-line settings
@@ -48,10 +48,11 @@ set textwidth=79
 set formatoptions=tcqrn1
 set tabstop=4		"indent using # of spaces
 set autoindent		"new lines inherit indentation of previous line
-set shiftwidth=2	"when shifting, indent # of spaces
-set softtabstop=2
-set expandtab		"concert tabs into spaces
+set shiftwidth=4	"when shifting, indent # of spaces
+set softtabstop=4
+"set expandtab		"concert tabs into spaces
 set noshiftround	"round to nearest shiftwidth
+set pastetoggle=<F2>	"f2 to pastemode before pasting, helps keep proper indentation
 
 "search options
 set hlsearch 		"enables search highlighting
@@ -82,7 +83,7 @@ set showcmd 		"show incomplete cmds at the bottom
 "code folding options
 set foldmethod=indent
 set foldnestmax=3
-set nofoldenable
+"set nofoldenable	"all folds are open, toggle with zi
 
 "misc options
 set autoread  		"automatically reload files changed outside of vim

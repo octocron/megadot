@@ -24,7 +24,8 @@ set title		"set window title to file being edited
 " netrw settings (nerdtree that ships with vim)
 let g:netrw_liststyle = 3	"viewtype can be cycled with i
 let g:netrw_banner = 0		"removes info banner, cycle with I
-let g:netrw_browse_split = 3 	"opens files in new tab from tree
+let g:netrw_browse_split = 1 	"1 hex, 2 vex, 3 tex, 4 prev window
+let g:netrw_altv = 1		"opens vertical split in wider window (75%)
 let g:netrw_winsize = 25 	"set tree width to 25%
 
 "text rendering options

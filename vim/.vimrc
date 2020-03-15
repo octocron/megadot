@@ -10,7 +10,11 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='dark'
 
 "colorscheme dante advantage darker-robin elflord koehler miko molokai
-colorscheme inkpot
+"moonlight nightfly synthwave84 sv gruvbox-material-hard cmptrclr
+"isotake hackerman camouflage nachtleben srcery shadesofamber
+"cobalt vorange 
+
+colorscheme srcery
 set number  		"line numbers are good
 set relativenumber 	"line numbers away
 set ruler 		"show file stats
@@ -21,7 +25,7 @@ set t_Co=256
 set title		"set window title to file being edited
 
 
-" netrw settings (nerdtree that ships with vim)
+"netrw settings (nerdtree that ships with vim)
 let g:netrw_liststyle = 3	"viewtype can be cycled with i
 let g:netrw_banner = 0		"removes info banner, cycle with I
 let g:netrw_browse_split = 1 	"1 hex, 2 vex, 3 tex, 4 prev window

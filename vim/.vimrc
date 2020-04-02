@@ -1,97 +1,105 @@
-set nocompatible "use vim over vi; must be at very top
+set nocompatible " Use vim over vi; must be at very top
 
-"pathogen settings
+" Pathogen settings
 execute pathogen#infect()
 filetype plugin indent on	"use plugins according to file type
 set noshowmode
 
-"air-line settings
+" Air-line settings
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='dark'
 
-"colorscheme dante advantage darker-robin elflord koehler miko molokai
-"moonlight nightfly synthwave84 sv gruvbox-material-hard cmptrclr
-"isotake hackerman camouflage nachtleben srcery shadesofamber
-"cobalt vorange 
+" Colorscheme dante advantage darker-robin elflord koehler miko molokai
+" Moonlight nightfly synthwave84 sv gruvbox-material-hard cmptrclr
+" Isotake hackerman camouflage nachtleben srcery shadesofamber
+" Cobalt vorange 
 
 colorscheme srcery
-set number  		"line numbers are good
-set relativenumber 	"line numbers away
-set ruler 		"show file stats
-set cursorline		"highlight the line currently under the cursor
-set visualbell		"flash the screen instead of beeping errors
-set history=1000  	"increase the undo limit
+set number  		" Line numbers are good
+set relativenumber 	" Line numbers away
+set ruler			" Show file stats
+set cursorline		" Highlight the line currently under the cursor
+set visualbell		" Flash the screen instead of beeping errors
+set history=1000  	" Increase the undo limit
 set t_Co=256
-set title		"set window title to file being edited
+set title			" Set window title to file being edited
 
+" Search down into subfolders
+" Add tab complete for all file-related tasks
+set path+=**
 
-"netrw settings (nerdtree that ships with vim)
-let g:netrw_liststyle = 3	"viewtype can be cycled with i
-let g:netrw_banner = 0		"removes info banner, cycle with I
-let g:netrw_browse_split = 1 	"1 hex, 2 vex, 3 tex, 4 prev window
-let g:netrw_altv = 1		"opens vertical split in wider window (75%)
-let g:netrw_winsize = 25 	"set tree width to 25%
+" Display all matching files when we tab complete
+" Allows :find by partial match and * for fuzzy
+set wildmenu
 
-"text rendering options
-set display+=lastline	"always try to show a paragraph's last line
-set encoding=utf-8	"use unicode
-set linebreak 		"avoid wrapping a line in the middle of a word
-set scrolloff=1 	"number of lines to keep above/below cursor
-set sidescrolloff=5 	"columns to keep /left/right of cursor
-syntax enable 		"turn on syntax highlighting
+" Netrw settings (nerdtree that ships with vim)
+let g:netrw_liststyle = 3		" Viewtype can be cycled with i
+let g:netrw_banner = 0			" Removes info banner, cycle with I
+let g:netrw_browse_split = 1 	" 1 hex, 2 vex, 3 tex, 4 prev window
+let g:netrw_altv = 1			" Opens vertical split in wider window (75%)
+let g:netrw_winsize = 25		" Set tree width to 25%
 
-"set command window height to 2 lines, to avoid many cases of having to
-"press <enter> to continue
-"set cmdheight=2
+" Text rendering options
+set display+=lastline	" Always try to show a paragraph's last line
+set encoding=utf-8		" Use unicode
+set linebreak			" Avoid wrapping a line in the middle of a word
+set scrolloff=1			" Number of lines to keep above/below cursor
+set sidescrolloff=5 	" Columns to keep /left/right of cursor
+syntax enable			" Turn on syntax highlighting
 
-"enable mouse for all modes
+" Set command window height to 2 lines, to avoid many cases of having to
+" Press <enter> to continue
+" Set cmdheight=2
+
+" Enable mouse for all modes
 set mouse=a
 
-"whitespace
-set wrap		"enable line wrapping
+" Whitespace
+set wrap		" Enable line wrapping
 set textwidth=79
 set formatoptions=tcqrn1
-set tabstop=4		"indent using # of spaces
-set autoindent		"new lines inherit indentation of previous line
-set shiftwidth=4	"when shifting, indent # of spaces
+set tabstop=4		" Indent using # of spaces
+set autoindent		" New lines inherit indentation of previous line
+set shiftwidth=4	" When shifting, indent # of spaces
 set softtabstop=4
-"set expandtab		"concert tabs into spaces
-set noshiftround	"round to nearest shiftwidth
-set pastetoggle=<F2>	"f2 to pastemode before pasting, helps keep proper indentation
+" Set expandtab		" Concert tabs into spaces
+set noshiftround	" Round to nearest shiftwidth
+set pastetoggle=<F2>	" F2 to pastemode before pasting, helps keep proper indentation
 
-"search options
-set hlsearch 		"enables search highlighting
-set ignorecase  	"ignore case when searching
-set incsearch   	"incremental search that shows partial matches
-set smartcase   	"automatically switch search to case-sensitive when search
-			"query contains an uppercase letter.
+" Search options
+set hlsearch 		" Enables search highlighting
+set ignorecase  	" Ignore case when searching
+set incsearch   	" Incremental search that shows partial matches
+set smartcase   	" Automatically switch search to case-sensitive when search
+					" Query contains an uppercase letter.
 
-"performance options
-set lazyredraw  	"do not update screen during macro or script executions
+" Performance options
+set lazyredraw  	" Don't update screen during macro or script executions
 
-"cursor motion
+" Cursor motion
 set scrolloff=3
-set backspace=indent,eol,start	"allow backspace over indent, line braks and insertion start
-set matchpairs+=<:> 	"use % to jump between pairs
+set backspace=indent,eol,start	" Allow backspace over indent, line braks and insertion start
+set matchpairs+=<:> 	" Use % to jump between pairs
 runtime! macros/matchit.vim
 
-"move up/down editor lines visually
+" Move up/down editor lines visually
 nnoremap j gj
 nnoremap k gk
+nnoremap ,html :-1read $HOME/.vim/.skeleton.html<CR>3jwf>a
 
-set hidden  		"hide files in background instead of closing them
-set ttyfast 		"speeds up scrolling
-set laststatus=2  	"status bar
-set showmode 		"show current mode at the bottom
-set showcmd 		"show incomplete cmds at the bottom
+set hidden  		" Hide files in background instead of closing them
+set ttyfast 		" Speeds up scrolling
+set laststatus=2  	" Status bar
+set showmode 		" Show current mode at the bottom
+set showcmd 		" Show incomplete cmds at the bottom
 
-"code folding options
+" Code folding options
 set foldmethod=indent
 set foldnestmax=3
-"set nofoldenable	"all folds are open, toggle with zi
+"set nofoldenable	" All folds are open, toggle with zi
 
-"misc options
-set autoread  		"automatically reload files changed outside of vim
-set confirm 		"display a confirm when closing unsaved
-set formatoptions+=j  	"delete comment characters when joining lines
+" Misc options
+set autoread  		" Automatically reload files changed outside of vim
+set confirm 		" Display a confirm when closing unsaved
+set formatoptions+=j  	" Delete comment characters when joining lines
 

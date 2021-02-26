@@ -16,7 +16,6 @@ let g:airline_theme='dark'
 
 colorscheme srcery
 set number  		" Line numbers are good
-set relativenumber 	" Line numbers away
 set ruler			" Show file stats
 set cursorline		" Highlight the line currently under the cursor
 set visualbell		" Flash the screen instead of beeping errors

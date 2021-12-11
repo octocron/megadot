@@ -115,6 +115,9 @@ alias later="logout"
 # watch 8bit starwars
 alias starwars="nc towel.blinkenlights.nl 23"
 
+# get local weather report
+alias weather="curl wttr.in"
+
 # start watching sass project
 alias sw="sass --watch sass/app.sass:css/app.css --style expanded"
 alias swc="sass --watch sass/app.sass:css/app.css --style compressed"

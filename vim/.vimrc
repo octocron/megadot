@@ -1,18 +1,19 @@
 set nocompatible " Use vim over vi; must be at very top
 
-" Pathogen settings
+"-------------Pathogen-Settings------------------------------------------>>>
 execute pathogen#infect()
 filetype plugin indent on	"use plugins according to file type
 set noshowmode
 
-" Air-line settings
+"-------------Airline-Settings------------------------------------------->>>
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='dark'
 
-" Colorscheme dante advantage darker-robin elflord koehler miko molokai
-" Moonlight nightfly synthwave84 sv gruvbox-material-hard cmptrclr
+"-------------Color-Schemes---------------------------------------------->>>
+" dante advantage darker-robin elflord koehler miko molokai
+" moonlight nightfly synthwave84 sv gruvbox-material-hard cmptrclr
 " Isotake hackerman camouflage nachtleben srcery shadesofamber
-" Cobalt vorange 
+" cobalt vorange 
 
 colorscheme srcery
 set number  		" Line numbers are good
@@ -23,6 +24,7 @@ set history=1000  	" Increase the undo limit
 set t_Co=256
 set title			" Set window title to file being edited
 
+"-------------Folder-Settings------------------------------------------->>>
 " Search down into subfolders
 " Add tab complete for all file-related tasks
 set path+=**
@@ -32,6 +34,7 @@ set path+=**
 set wildmenu
 
 " Netrw settings (nerdtree that ships with vim)
+"-------------Netrw-Settings-------------------------------------------->>>
 let g:netrw_liststyle = 3		" Viewtype can be cycled with i
 let g:netrw_banner = 0			" Removes info banner, cycle with I
 let g:netrw_browse_split = 1 	" 1 hex, 2 vex, 3 tex, 4 prev window
@@ -39,6 +42,7 @@ let g:netrw_altv = 1			" Opens vertical split in wider window (75%)
 let g:netrw_winsize = 25		" Set tree width to 25%
 
 " Text rendering options
+"-------------Text-Settings-------------------------------------------->>>
 set display+=lastline	" Always try to show a paragraph's last line
 set encoding=utf-8		" Use unicode
 set linebreak			" Avoid wrapping a line in the middle of a word
@@ -53,7 +57,7 @@ syntax enable			" Turn on syntax highlighting
 " Enable mouse for all modes
 set mouse=a
 
-" Whitespace
+"-------------Whitespace-Settings-------------------------------------->>>
 set wrap		" Enable line wrapping
 set textwidth=79
 set formatoptions=tcqrn1
@@ -65,17 +69,17 @@ set softtabstop=4
 set noshiftround	" Round to nearest shiftwidth
 set pastetoggle=<F2>	" F2 to pastemode before pasting, helps keep proper indentation
 
-" Search options
+"-------------Text-Search-Options------------------------------------->>>
 set hlsearch 		" Enables search highlighting
 set ignorecase  	" Ignore case when searching
 set incsearch   	" Incremental search that shows partial matches
 set smartcase   	" Automatically switch search to case-sensitive when search
 					" Query contains an uppercase letter.
 
-" Performance options
+"--------------Performance-Options------------------------------------->>>
 set lazyredraw  	" Don't update screen during macro or script executions
 
-" Cursor motion
+"--------------Cursor-Motion------------------------------------->>>
 set scrolloff=3
 set backspace=indent,eol,start	" Allow backspace over indent, line braks and insertion start
 set matchpairs+=<:> 	" Use % to jump between pairs
@@ -92,13 +96,12 @@ set laststatus=2  	" Status bar
 set showmode 		" Show current mode at the bottom
 set showcmd 		" Show incomplete cmds at the bottom
 
-" Code folding options
+"--------------Folding-Options------------------------------------->>>
 set foldmethod=indent
 set foldnestmax=3
 "set nofoldenable	" All folds are open, toggle with zi
 
-" Misc options
+"--------------Miscellaneous-Options------------------------------->>>
 set autoread  		" Automatically reload files changed outside of vim
 set confirm 		" Display a confirm when closing unsaved
 set formatoptions+=j  	" Delete comment characters when joining lines
-

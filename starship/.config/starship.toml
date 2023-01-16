@@ -6,8 +6,8 @@ format = """$env_var $all"""  # Add custom formatting before other stuff
 
 # Drop ugly default prompt characters
 [character]
-success_symbol = ""
-error_symbol = ""
+success_symbol = "[➜](046)"
+error_symbol = "[➜](010)"
 
 # ---
 
@@ -39,18 +39,17 @@ disabled = false
 
 # Shows current directory
 [directory]
-truncation_length = 1
+truncation_length = 2
 truncation_symbol = "…/"
 home_symbol = " ~"
 read_only_style = "197"
 read_only = "  "
-format = "at [$path]($style)[$read_only]($read_only_style) "
+format = "in [$path]($style)[$read_only]($read_only_style) "
 
 # Shows current git branch
 [git_branch]
 symbol = " "
 format = "via [$symbol$branch]($style) "
-# truncation_length = 4
 truncation_symbol = "…/"
 style = "bold green"
 
@@ -73,6 +72,16 @@ deleted = " "
 # Shows kubernetes context and namespace
 [kubernetes]
 format = 'via [ﴱ $context\($namespace\)](bold purple) '
+disabled = false
+
+# Shows golang context and status
+[golang]
+format = 'via [🏎💨 $version](bold cyan) '
+
+# shows ip address
+[localip]
+ssh_only = false
+format = 'at [$localipv4](012) '
 disabled = false
 
 # ---

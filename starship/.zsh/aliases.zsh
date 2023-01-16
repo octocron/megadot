@@ -3,6 +3,7 @@ alias a="ansible"
 alias ap="ansible-playbook"
 alias d3="cd ~/projects/hugo/d3c3p7/"
 alias grep='grep --color'
+alias kg="killall gpg-agent || true; gpg-agent --daemon"
 alias la="exa --group-directories-first -la"
 alias ls="exa --icons --group-directories-first"
 alias lt="exa -lhTL"

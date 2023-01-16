@@ -28,6 +28,9 @@ brew tap homebrew/cask-fonts
 brew update && brew upgrade
 brew install zsh
 
+# List all the fonts (will also checkmark those installed already)
+brew -S nerdfonts
+
 # Favorites by order
 brew install --cask font-jetbrains-mono-nerd-font
 brew install --cask font-caskaydia-cove-nerd-font
@@ -54,11 +57,11 @@ Now simply place files in Home (~)
 choco install starship
 ```
 
-Place files same area as Mac
+Place files same area as Mac  
 
 ### Linux
 
-- Download font
+- Download font  
 
 ```zsh
 [ -d ~/.fonts ] && echo "Directory Exists" || mkdir ~/.fonts
@@ -68,23 +71,46 @@ fc-cashe -fv
 
 ### Ansible
 
-This will be work and progress for now as I will want this to work cross platform.
+TODO: create a working playbook for all platforms.  The following works for Ubuntu.
+
+This works to install JetBrains Locally.  You could plug in other fonts as I did not
+create any {{ moustaches }} and is not fully fleshed out.  
+
+I am assuming ansible knowledge and setup on control machine.  Modify to your needs.  
+Both these files in same location where ansible command is run. (whereever you want to be)  
+
+ansible_hosts  
+
+```ansible
+[control]
+localhost ansible_connection=local
+```
+
+and the second file being nerdfont.yml  
 
 ```yml
-- name: Checking for fonts directory...
-  file:
-    path: "{{ lookup('env', 'HOME') }}/.fonts"
-    state: directory
+---
+- name: Install JetBrains Mono...
+  hosts: localhost
+  connection: local
+  become: true
+  tasks:
+    - name: Downloading JetBrains Font..
+      get_url:
+        url: https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.2/JetBrainsMono.zip
+        dest: /tmp/JetBrainsMono.zip
+        
+    - name: Extract JetBrains Fonts
+      unarchive:
+        src: /tmp/JetBrainsMono.zip
+        dest: /usr/local/share/fonts/
 
-- name: JetBrains exists...
-  shell: "ls {{ lookup('env', 'HOME') }}/.fonts/JetBrainsMono*Nerd*Font*Complete*"
-  register: jetbrains_exists
-  ignore_errors: yes
+    - name: Updating Font Cache...
+      shell: fc-cache -f -v
+```
 
-- name: Downloading JetBrains...
-  when: jetbrains_exists is failed
-  ansible.builtin.unarchive:
-    src: https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.2/JetBrainsMono.zip
-    dest: "{{ lookup('env', 'HOME') }}/.fonts/"
-    remote_src: yes
+then run:  
+
+```zsh
+ansible-playbook nerdfont.yml -i ansible_hosts
 ```

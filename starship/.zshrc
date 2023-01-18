@@ -4,9 +4,7 @@
 [[ -f ~/.zsh/starship.zsh ]] && source ~/.zsh/starship.zsh
 [[ -f ~/.zsh/history.zsh ]] && source ~/.zsh/history.zsh
 [[ -f ~/.zsh/osx.zsh ]] && source ~/.zsh/osx.zsh
+[[ -f ~/.zsh/plugins.zsh ]] && source ~/.zsh/plugins.zsh
 
 # Load Starship
 eval "$(starship init zsh)"
-
-# Load Direnv
-eval "$(direnv hook zsh)"

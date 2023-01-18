@@ -41,7 +41,7 @@ brew install --cask font-hack-nerd-font
 brew install starship
 ```
 
-Now simply place files in Home (~)
+After these couple things just place files from the starship folder into Home (~)
 
 - .zsh directory with corresponding zsh files
 - .zshrc
@@ -113,4 +113,17 @@ then run:
 
 ```zsh
 ansible-playbook nerdfont.yml -i ansible_hosts
+```
+
+### The Plugins (Mac)
+
+Unfortunately gotta complicate this for two things I have come to rely upon.  
+That is. Syntax Highlighting and Auto Suggestions.  I use to have this managed  
+by Oh-My-Zsh but we do not actually need it in order to use the plugins.
+
+- These plugins are already sourced in plugins.zsh
+
+```zsh
+brew install zsh-fast-syntax-highlighting
+brew install zsh-autosuggestions
 ```

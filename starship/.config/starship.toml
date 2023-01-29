@@ -2,7 +2,11 @@
 
 add_newline = true  # Inserts a blank line between shell prompts
 command_timeout = 1000  # Change command timeout from 500 to 1000 ms
-format = """$env_var $all"""  # Add custom formatting before other stuff
+
+# Custom Formatting
+format = """\
+[╭╴](046)$env_var\
+$all[╰─](046)$character"""
 
 # Drop ugly default prompt characters
 [character]

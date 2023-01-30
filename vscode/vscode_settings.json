@@ -1,0 +1,36 @@
+{
+    "workbench.colorTheme": "Noctis Obscuro",
+    "workbench.iconTheme": "vscode-icons",
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    "terminal.integrated.defaultProfile.osx": "zsh",
+    "terminal.integrated.defaultProfile.linux": "zsh",
+    "editor.fontFamily": "JetBrainsMono Nerd Font Mono",
+    "terminal.integrated.fontFamily": "'JetBrainsMono Nerd Font Mono'",
+    "terminal.integrated.fontSize": 14,
+    "editor.fontLigatures": true,
+    "workbench.colorCustomizations": {
+
+        "terminal.background":"#000101",
+        "terminal.foreground":"#00ccff",
+        "terminal.ansiBlack":"#000101",
+        "terminal.ansiBrightBlack":"#660088",
+        "terminal.ansiBrightBlue":"#660088",
+        "terminal.ansiBrightCyan":"#228800",
+        "terminal.ansiBrightGreen":"#ff2222",
+        "terminal.ansiBrightMagenta":"#ffaa00",
+        "terminal.ansiBrightRed":"#FB543F",
+        "terminal.ansiBrightWhite":"#ee4400",
+        "terminal.ansiBrightYellow":"#ddd000",
+        "terminal.ansiBlue":"#002288",
+        "terminal.ansiCyan":"#dd22ff",
+        "terminal.ansiGreen":"#228800",
+        "terminal.ansiMagenta":"#660088",
+        "terminal.ansiRed":"#880022",
+        "terminal.ansiWhite":"#ee4400",
+        "terminal.ansiYellow":"#0066cc"
+    },
+    "security.workspace.trust.untrustedFiles": "open",
+    "vsicons.dontShowNewVersionMessage": true
+}

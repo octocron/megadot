@@ -4,7 +4,7 @@
 
 -This is a personal project of various dot files.
 -These files may change over time.
-![Starship Prompt](https://live.staticflickr.com/65535/52631567950_d8c2a713cb_b.jpg)
+![Starship Prompt](https://live.staticflickr.com/65535/52631567950_ebad41d43f_h.jpg)
 
 ## Dotfile Ideas
 
@@ -39,7 +39,11 @@ brew install --cask font-hack-nerd-font
 
 # Install Starship
 brew install starship
+
+# Install Exa (colorized ls)
+brew install exa
 ```
+
 
 After these couple things just place files from the starship folder into Home (~)
 

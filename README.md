@@ -2,24 +2,24 @@
 
 ## <==Megacron's Megadots==>
 
--This is a personal project of various dot files.
--These files may change over time.
+* This is a personal project of various dot files.  
+* These files may change over time.  
 ![Starship Prompt](https://live.staticflickr.com/65535/52631567950_ebad41d43f_h.jpg)
 
 ## Dotfile Ideas
 
-[Dotfiles](https://dotfiles.github.io/frameworks/)  social exchange of dotfile ideas.
+[Dotfiles](https://dotfiles.github.io/frameworks/)  social exchange of dotfile ideas.  
 
 Further concatenation of ideas will occur in this ongoing project to meet my
-personal needs.
+personal needs.  
 
 ## Nerd Font ~~> Starship ~~> zsh <<=Cross Platform=>>
 
-If you have some customizations of your own of any of these files be sure to save them elsewhere before proceeding!
+If you have some customizations of your own of any of these files be sure to save them elsewhere before proceeding!  
 
-For Starship it needs a font installed on the machine that has icons.
-To do that head over to [Nerd Fonts](https://www.nerdfonts.com/font-downloads).
-A few I like that can be installed through Homebrew:
+For Starship it needs a font installed on the machine that has icons.  
+To do that head over to [Nerd Fonts](https://www.nerdfonts.com/font-downloads).  
+A few I like that can be installed through Homebrew:  
 
 ### Mac
 
@@ -45,17 +45,17 @@ brew install exa
 ```
 
 
-After these couple things just place files from the starship folder into Home (~)
+After these couple things just place files from the starship folder into Home (~)  
 
-- .zsh directory with corresponding zsh files
-- .zshrc
-- .config/starship.toml
+* .zsh directory with corresponding zsh files
+* .zshrc
+* .config/starship.toml
 
 ### Windows
 
-- Download font
-- Extract font
-- Select all > right click > more options > install
+* Download font
+* Extract font
+* Select all > right click > more options > install
 
 ```zsh
 choco install starship
@@ -65,7 +65,7 @@ Place files same area as Mac
 
 ### Linux
 
-- Download font  
+* Download font  
 
 ```zsh
 [ -d ~/.fonts ] && echo "Directory Exists" || mkdir ~/.fonts
@@ -123,9 +123,9 @@ ansible-playbook nerdfont.yml -i ansible_hosts
 
 Unfortunately gotta complicate this for two things I have come to rely upon.  
 That is. Syntax Highlighting and Auto Suggestions.  I use to have this managed  
-by Oh-My-Zsh but we do not actually need it in order to use the plugins.
+by Oh-My-Zsh but we do not actually need it in order to use the plugins.  
 
-- These plugins are already sourced in plugins.zsh
+* These plugins are already sourced in plugins.zsh
 
 ```zsh
 brew install zsh-fast-syntax-highlighting

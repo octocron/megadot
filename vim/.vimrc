@@ -15,7 +15,7 @@ let g:airline_theme='dark'
 " Isotake hackerman camouflage nachtleben srcery shadesofamber
 " cobalt vorange 
 
-colorscheme srcery
+colorscheme miko
 set number  		" Line numbers are good
 set ruler			" Show file stats
 set cursorline		" Highlight the line currently under the cursor

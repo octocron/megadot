@@ -5,6 +5,7 @@
 [[ -f ~/.zsh/history.zsh ]] && source ~/.zsh/history.zsh
 [[ -f ~/.zsh/osx.zsh ]] && source ~/.zsh/osx.zsh
 [[ -f ~/.zsh/plugins.zsh ]] && source ~/.zsh/plugins.zsh
+[[ -f ~/.zsh/teleport.zsh ]] && source ~/.zsh/teleport.zsh
 
 # Load Starship
 eval "$(starship init zsh)"

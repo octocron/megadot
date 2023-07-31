@@ -114,3 +114,6 @@ disabled = true
 
 [terraform]
 disabled = true
+
+[battery]
+disabled = true

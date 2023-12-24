@@ -7,6 +7,7 @@
 
 local wezterm = require 'wezterm'
 local config = {}
+
 -- Use config builder object if possible
 if wezterm.config_builder then config = wezterm.config_builder() end
 
@@ -60,14 +61,18 @@ wezterm.on("update-right-status", function(window, pane)
     -- Let's add color to one of the components
     window:set_right_status(wezterm.format({
         -- Wezterm has a built-in nerd fonts
+        { Foreground = { Color = "aa44cc" } },
         { Text = wezterm.nerdfonts.oct_table .. "  " .. stat },
         { Text = " | " },
+        { Foreground = { Color = "ee4400" } },
         { Text = wezterm.nerdfonts.md_folder .. "  " .. cwd },
         { Text = " | " },
-        { Foreground = { Color = "FFB86C" } },
+        { Foreground = { Color = "ff9900" } },
         { Text = wezterm.nerdfonts.fa_code .. "  " .. cmd },
         "ResetAttributes",
+        { Foreground = { Color = "ff9900" } },
         { Text = " | " },
+        { Foreground = { Color = "0066cc" } },
         { Text = wezterm.nerdfonts.md_clock .. "  " .. time },
         { Text = " |" },
     }))

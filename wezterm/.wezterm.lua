@@ -14,13 +14,45 @@ if wezterm.config_builder then config = wezterm.config_builder() end
 -- color scheme (Tokyo Night, Trim Yer Beard, MaterialDark, Royal, Darktooth)
 config.color_scheme = "Tokyo Night"
 
+config.colors = {
+	foreground = "#0066cc",
+	background = "#000100",
+	cursor_bg = "#ee4400",
+	cursor_fg = "#ffffff",
+	cursor_border = "#ee4400",
+	split = "#000066",
+	tab_bar = {
+		background = "#000100",
+	},
+	ansi = {
+		"#ff9900",
+		"#0066cc",
+		"#228800",
+		"#ffaa00",
+		"#aa44cc",
+		"#ee1b1b",
+		"#990011",
+		"#ee4400",
+	},
+	brights = {
+		"#ff9900",
+		"#0066cc",
+		"#228800",
+		"#ffaa00",
+		"#aa44cc",
+		"#ee1b1b",
+		"#990011",
+		"#ee4400",
+	},
+}
+
 -- font with fallback
 config.font = wezterm.font_with_fallback({
     { family = "Maple Mono",  scale = 1.2 },
     { family = "JetBrainsMono Nerd Font", scale = 1.2 },
 })
 
-config.window_background_opacity = 0.9
+config.window_background_opacity = 0.95
 config.window_decorations = "RESIZE"
 config.window_close_confirmation = "AlwaysPrompt"
 config.scrollback_lines = 3000
@@ -61,21 +93,58 @@ wezterm.on("update-right-status", function(window, pane)
     -- Let's add color to one of the components
     window:set_right_status(wezterm.format({
         -- Wezterm has a built-in nerd fonts
-        { Foreground = { Color = "aa44cc" } },
+		{ Foreground = { Color = "aa44cc" } },
         { Text = wezterm.nerdfonts.oct_table .. "  " .. stat },
         { Text = " | " },
-        { Foreground = { Color = "ee4400" } },
+		{ Foreground = { Color = "ee4400" } },
         { Text = wezterm.nerdfonts.md_folder .. "  " .. cwd },
         { Text = " | " },
         { Foreground = { Color = "ff9900" } },
         { Text = wezterm.nerdfonts.fa_code .. "  " .. cmd },
         "ResetAttributes",
-        { Foreground = { Color = "ff9900" } },
+		{ Foreground = { Color = "ff9900" } },
         { Text = " | " },
-        { Foreground = { Color = "0066cc" } },
+		{ Foreground = { Color = "0066cc" } },
         { Text = wezterm.nerdfonts.md_clock .. "  " .. time },
         { Text = " |" },
     }))
 end)
+
+-- keybindings
+local act = wezterm.action
+
+config.keys = {
+    {
+        key = 'R',
+        mods = 'CMD|SHIFT',
+        action = act.PromptInputLine {
+            description = 'Enter new name for tab',
+            action = wezterm.action_callback(function(window, _, line)
+                if line then
+                    window:active_tab():set_title(line)
+                end
+            end),
+        },
+    },
+    {
+        key = ',',
+        mods = 'CMD',
+        action = act.SpawnCommandInNewTab {
+            cwd = os.getenv('WEZTERM_CONFIG_DIR'),
+            set_environment_variables = {
+                TERM = 'screen-256color',
+            },
+            args = {
+                '/usr/bin/vim',
+                os.getenv('WEZTERM_CONFIG_FILE'),
+            },
+        },
+    },
+	{
+		key = 't',
+		mods = 'CMD|SHIFT',
+		action = act.ShowTabNavigator,
+	},
+}
 
 return config

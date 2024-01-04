@@ -1,5 +1,6 @@
 set nocompatible " Use vim over vi; must be at very top
 
+" place colors in .vim & .zshrc in ~ & install pathogen
 "-------------Pathogen-Settings------------------------------------------>>>
 execute pathogen#infect()
 filetype plugin indent on	"use plugins according to file type
@@ -16,7 +17,8 @@ let g:airline_theme='dark'
 " cobalt vorange 
 
 colorscheme miko
-set number  		" Line numbers are good
+set number  		" with relative this allows current line to show
+set relativenumber		" show numbers relatively
 set ruler			" Show file stats
 set cursorline		" Highlight the line currently under the cursor
 set visualbell		" Flash the screen instead of beeping errors
@@ -61,11 +63,11 @@ set mouse=a
 set wrap		" Enable line wrapping
 set textwidth=79
 set formatoptions=tcqrn1
-set tabstop=4		" Indent using # of spaces
+set tabstop=2		" Indent using # of spaces
 set autoindent		" New lines inherit indentation of previous line
 set shiftwidth=4	" When shifting, indent # of spaces
-set softtabstop=4
-" Set expandtab		" Concert tabs into spaces
+set softtabstop=2
+set expandtab		" Concert tabs into spaces
 set noshiftround	" Round to nearest shiftwidth
 set pastetoggle=<F2>	" F2 to pastemode before pasting, helps keep proper indentation
 

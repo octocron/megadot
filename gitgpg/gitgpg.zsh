@@ -17,4 +17,8 @@ gpg --import-ownertrust < /Volumes/EXCALIBUR/gpg/trustdb_bak.txt
 # find key # with gpg --list-secret-keys
 git config --global user.signingkey <key#>
 
+# add the following to ~/.gnupg/gpg.conf or place file in from this project
+use-agent
+pinentry-mode loopback
+
 # signing through gitlab should function!

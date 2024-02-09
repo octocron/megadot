@@ -1,0 +1,26 @@
+[user]
+	signingkey = 5080FDE12D3B22A116CE0853711CBD22FAEA82D6
+	name = megacron
+	email = megacron@d3c3p7.com
+[push]
+	autoSetupRemote = true
+[merge]
+  conflictstyle = diff3
+[diff]
+  colorMoved = default
+[gpg]
+	program = gpg
+[commit]
+	gpgsign = true
+[init]
+	defaultBranch = trunk
+[core]
+	editor = vim
+  pager = delta
+[interactive]
+  diffFilter = delta --color-only
+[delta]
+  navigate = true
+  light = false
+  side-by-side = true
+  line-numbers = true

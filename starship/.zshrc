@@ -10,5 +10,6 @@
 [[ -f ~/.zsh/nix.zsh ]] && source ~/.zsh/nix.zsh
 
 # Load Starship
+eval "$(thefuck --alias)"
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"

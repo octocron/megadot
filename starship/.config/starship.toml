@@ -8,10 +8,10 @@ format = """\
 [╭╴](046)$env_var\
 $all[╰─](046)$character"""
 
-# Drop ugly default prompt characters
+# Drop ugly default prompt characters ⟩ ❯ ƒ
 [character]
-success_symbol = "[➜](046)"
-error_symbol = "[➜](010)"
+success_symbol = "[⟩](bold 046)"
+error_symbol = "[ƒ](bold 005)"
 
 # ---
 

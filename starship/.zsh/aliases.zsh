@@ -10,6 +10,7 @@ alias ls="exa --icons --group-directories-first"
 alias lt="exa -lhTL"
 alias lsd="exa -D"
 alias lg="exa -lh --git"
+alias mostcli="history | awk '{print $2} | sort | uniq -c | sort -nr | head -10"
 alias reload="exec $SHELL -l"
 alias vimcon="vim ~/.vimrc"
 alias week='date +%V'

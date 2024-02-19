@@ -12,4 +12,4 @@
 # Load Starship
 eval "$(thefuck --alias)"
 eval "$(starship init zsh)"
-eval "$(zoxide --cmd cd init zsh)"
+eval "$(zoxide init --cmd cd zsh)"

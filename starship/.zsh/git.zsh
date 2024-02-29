@@ -1,8 +1,12 @@
 #-------------git---------------------------------------------------->>>
 alias ga="git add ."
+alias gb="git branch"
 alias gc="git commit -S -m "
 alias gd="git diff"
 alias gs="git status"
+alias gsl="git stash list"
+alias gsf="git stash push --"
+alias gsp="git stash pop"
 alias gdh="git diff HEAD"
 alias gp="git push"
 alias gpt="git push -u origin trunk"

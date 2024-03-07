@@ -41,18 +41,24 @@ ssh_only = false
 format = "[$hostname](bold yellow) "
 disabled = false
 
+# Shows nix shell
+[nix_shell]
+symbol = ""
+format = "[$symbol$name]($style) "
+style = "bright-purple bold"
+
 # Shows current directory
 [directory]
 truncation_length = 2
 truncation_symbol = "…/"
-home_symbol = "󰋞 ~"
+home_symbol = " ~"
 read_only_style = "197"
 read_only = "  "
 format = "in [$path]($style)[$read_only]($read_only_style) "
 
 # Shows current git branch
 [git_branch]
-symbol = "󰊢 "
+symbol = " "
 format = "via [$symbol$branch]($style) "
 truncation_symbol = "…/"
 style = "bold green"
@@ -61,16 +67,16 @@ style = "bold green"
 [git_status]
 format = '[\($all_status$ahead_behind\)]($style) '
 style = "bold green"
-conflicted = "🏳"
-up_to_date = " "
-untracked = " "
-ahead = "⇡${count}"
-diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+conflicted = "󱚠 "
+up_to_date = "󱓏 "
+untracked = "󱙄"
+ahead = "󰶼${count}"
+diverged = "󱡷 󰶼${ahead_count}󰶹${behind_count}"
 behind = "⇣${count}"
-stashed = "󰏗 "
-modified = " "
+stashed = "󱧕 "
+modified = " "
 staged = '[++\($count\)](green)'
-renamed = "󰖷 "
+renamed = "󰽄 "
 deleted = " "
 
 # Shows kubernetes context and namespace
@@ -80,7 +86,7 @@ disabled = false
 
 # Shows golang context and status
 [golang]
-format = 'via [🏎💨 $version](bold cyan) '
+format = 'via [💨 $version](bold cyan) '
 
 # shows ip address
 [localip]

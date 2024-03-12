@@ -2,7 +2,7 @@
 alias ga="git add ."
 alias gb="git branch -a"
 alias gbd="git branch -d"
-alias gbod = "git push origin --delete";
+alias gbod="git push origin --delete";
 alias gc="git commit -S -m "
 alias gd="git diff"
 alias gs="git status"

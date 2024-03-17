@@ -27,6 +27,30 @@ config.colors = {
 	split = "#0000ff",
 	tab_bar = {
 		background = "#000100",
+    active_tab = {
+      bg_color = "#000100",
+      fg_color = "#228800",
+      intensity = "Bold",
+      underline = "Single",
+    },
+    inactive_tab = {
+      bg_color = "#000100",
+      fg_color = "#0066cc",
+      underline = "Single",
+    },
+    inactive_tab_hover = {
+      bg_color = "#000100",
+      fg_color = "#ee4400",
+      underline = "Single",
+    },
+    new_tab = {
+      bg_color = "#000100",
+      fg_color = "#ffaa00",
+    },
+    new_tab_hover = {
+      bg_color = "#000100",
+      fg_color = "#ee4400",
+    },
 	},
 	ansi = {
 		"#ff9900",

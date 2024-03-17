@@ -17,4 +17,8 @@ alias gsp="git stash pop"
 alias gco="git checkout"
 alias gcob="git checkout -b"
 alias gcot="git checkout trunk"
+alias gl="git log"
+alias gla="git log --all --graph --oneline"
+alias gls="git log --stat"
+alias glo="git log -1 --pretty=%H"
 #-------------end-of-line------------------------------------------->>>

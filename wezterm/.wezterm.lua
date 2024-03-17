@@ -20,7 +20,11 @@ config.colors = {
 	cursor_bg = "#ee4400",
 	cursor_fg = "#ffffff",
 	cursor_border = "#ee4400",
-	split = "#000066",
+  selection_bg = "#228800",
+  selection_fg = "#ffffff",
+  scrollbar_thumb = "#ee4400",
+  visual_bell = "#990011",
+	split = "#0000ff",
 	tab_bar = {
 		background = "#000100",
 	},

@@ -40,10 +40,9 @@ brew install --cask font-hack-nerd-font
 # Install Starship
 brew install starship
 
-# Install Exa (colorized ls)
-brew install exa
+# Install Eza (colorized ls)
+brew install eza
 ```
-
 
 After these couple things just place files from the starship folder into Home (~)  
 

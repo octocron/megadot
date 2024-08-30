@@ -7,6 +7,7 @@
 [[ -f ~/.zsh/nvims.zsh ]] && source ~/.zsh/nvims.zsh
 [[ -f ~/.zsh/osx.zsh ]] && source ~/.zsh/osx.zsh
 [[ -f ~/.zsh/plugins.zsh ]] && source ~/.zsh/plugins.zsh
+[[ -f ~/.zsh/sopsnix.zsh ]] && source ~/.zsh/sopsnix.zsh
 [[ -f ~/.zsh/starship.zsh ]] && source ~/.zsh/starship.zsh
 [[ -f ~/.zsh/teleport.zsh ]] && source ~/.zsh/teleport.zsh
 
